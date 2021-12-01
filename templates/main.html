@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Is my PDF Malicious?</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- <link rel="stylesheet" href="templates/styles.css"/> -->
     <style>
+      @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+      @font-face {
+        font-family: 'IBMPlexSansKR-Light';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Light.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -18,7 +27,7 @@
       }
 
       html {
-        font: normal 16px sans-serif;
+        font: normal 16px "IBMPlexSansKR-Light";
         color: #555;
       }
 
@@ -48,6 +57,7 @@
         text-align: center;
         margin-bottom: 10px;
         width: 500px;
+        font-family: "IBMPlexSansKR-Light";
       }
 
       hr {
@@ -81,7 +91,7 @@
       section h3.title {
         color: #414a4f;
         text-transform: capitalize;
-        font: bold 32px "Open Sans", sans-serif;
+        font: bold 32px "IBMPlexSansKR-Light";
         margin-bottom: 35px;
         text-align: center;
       }
@@ -119,7 +129,7 @@
       }
 
       header h2 {
-        font-family: "Quicksand", sans-serif;
+        font-family: "IBMPlexSansKR-Light";
       }
 
       header nav {
@@ -189,12 +199,12 @@
       }
 
       .hero h1 {
-        font: bold 60px "Open Sans", sans-serif;
+        font: bold 60px "IBMPlexSansKR-Light";
         margin-bottom: 15px;
       }
 
       .hero h3 {
-        font: normal 28px "Open Sans", sans-serif;
+        font: normal 28px "IBMPlexSansKR-Light";
         margin-bottom: 40px;
       }
 
@@ -386,7 +396,7 @@
         text-align: center;
         color: #fff;
         background-color: #414a4f;
-        padding: 60px 0;
+        padding: 30px 0;
       }
 
       footer ul {
@@ -411,7 +421,7 @@
         text-transform: uppercase;
         font-size: 14px;
         color: rgba(255, 255, 255, 0.6);
-        margin-bottom: 10px;
+        /* margin-bottom: 10px; */
       }
 
       footer p a {
@@ -439,10 +449,12 @@
 	<header>
 		<h2><a href="#">Is My PDF Malicious?</a></h2>
 		<nav>
-			<!-- <li><a href="#">디자인은</a></li>
-			<li><a href="#">역시</a></li>
-			<li><a href="#">뽀리는게</a></li>
-			<li><a href="#">답</a></li> -->
+			<!--
+        <li><a href="#">디자인은</a></li>
+			  <li><a href="#">역시</a></li>
+			  <li><a href="#">뽀리는게</a></li>
+			  <li><a href="#">답</a></li>
+      -->
 		</nav>
 	</header>
 
@@ -450,14 +462,14 @@
 	<section class="hero">
 		<div class="background-image" style="background-image: url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);"></div>
 		<h1>Find Out if Your PDF File is Malicious</h1>
-		<h3>제목 2</h3>
+		<h3>This site displays end-to-end PDF malware classification results when PDF file is uploaded.</h3>
 		<a href="" class="btn">하나의 파일을 test</a>
 		<a href="" class="btn">여러 개의 파일을 test</a>
 	</section>
 
 
 	<section class="our-work">
-		<h3 class="title">Some of our work</h3>
+		<h3 class="title">About</h3>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices. Morbi vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.</p>
 		<hr>
 
@@ -467,10 +479,10 @@
 			<li class="large" style="background-image: url(assets/img/balloon.jpg);"></li>
 			<li class="small" style="background-image: url(assets/img/mountain.jpg);"></li>
 		</div>
-	</section> -->
+	</section>
 	
 
-	<!-- <section class="features">
+	<section class="features">
 		<h3 class="title">Features and services</h3>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices. Morbi vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.</p>
 		<hr>
@@ -530,7 +542,8 @@
 			<li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
 			<li><a href="#"><i class="fa fa-github-square"></i></a></li>
 		</ul> -->
-		<p>21-2 웹보안및실습 <a href="https://github.com/kshjessica/study_Web-Secuity.git" target="_blank">Team 1</a>. images courtesy to <a href="http://unsplash.com/" target="_blank">unsplash</a>.</p>
+		<p>21-2 웹보안및실습 <a href="https://github.com/kshjessica/study_Web-Secuity.git" target="_blank">Team 1</a>(고민지, 김서현, 박예진, 안홍은, 한근영)</p>
+    <p>Images courtesy to <a href="http://unsplash.com/" target="_blank">unsplash</a>.</p>
 	</footer>
 
 </body>
