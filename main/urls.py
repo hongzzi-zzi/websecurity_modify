@@ -1,8 +1,10 @@
 from django.urls import path
-from websec import views
+from django.conf import settings 
+from django.conf.urls.static import static
+from . import views
 
 app_name = 'functions'
 
 urlpatterns = [
-    
+    path('',views.main, name='main')
 ]
