@@ -21,7 +21,7 @@ def libsvm_to_csv(libsvmFile):
 		else:
 			mb = 'B'
 		
-		result_string=mb+', '+str(minus_list).strip('[]')+', '+file_name
+		result_string=str(minus_list).strip('[]')+', '+file_name
 
 		print(result_string)
 
