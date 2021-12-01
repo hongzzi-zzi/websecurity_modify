@@ -1,11 +1,11 @@
 import sys
 def libsvm_to_csv(libsvmFile):
-	sys.stdout = open('result.csv', 'w')
+	sys.stdout = open('/Users/yehey/Desktop/EWHA/21-2/study_Web-Secuity/util/testresult.csv', 'w')
 	f = open(libsvmFile, 'r')
 
 	lines = f.readlines()
 	for line in lines:	
-		minus_list = [-1]*3639
+		minus_list = [-1]*275
 
 		l = line.split(' #')[0]
 		l = l.split(' ')
@@ -21,7 +21,8 @@ def libsvm_to_csv(libsvmFile):
 		else:
 			mb = 'B'
 		
-		result_string=str(minus_list).strip('[]')+', '+file_name
+		# result_string=str(minus_list).strip('[]')+', '+file_name
+		result_string=str(minus_list).strip('[]')
 
 		print(result_string)
 
