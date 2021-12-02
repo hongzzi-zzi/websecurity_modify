@@ -17,7 +17,7 @@ def model_form_upload(request):
           return redirect('main:main')
   else:
       form = PDFUploadForm()
-  return render(request, 'pdf_upload.html', {
+  return render(request, 'pdf_upload_single.html', {
       'form': form
   })
 
