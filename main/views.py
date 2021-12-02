@@ -14,7 +14,7 @@ def model_form_upload_single(request):
       form = PDFUploadForm(request.POST, request.FILES)
       if form.is_valid():
           form.save()
-          return redirect('main:main')
+          return redirect('main:pdf_result')
   else:
       form = PDFUploadForm()
   return render(request, 'pdf_upload_single.html', {
