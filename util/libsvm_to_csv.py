@@ -9,7 +9,7 @@ def libsvm_to_csv(libsvmFile):
 
 		l = line.split(' #')[0]
 		l = l.split(' ')
-		file_name = line.split(' #')[1].strip('\n')
+		file_name = line.split(' #')[1].strip('\n').split('/')[-1]
 		
 		for i in range(len(l)):
 			if i != 0:
@@ -24,6 +24,8 @@ def libsvm_to_csv(libsvmFile):
 		# result_string=str(minus_list).strip('[]')+', '+file_name
 		result_string=str(minus_list).strip('[]')
 
-		print(result_string)
+		if (file_name!='default.pdf'):
+			print(result_string)
+		
 
 	sys.stdout.close()
