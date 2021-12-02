@@ -7,5 +7,6 @@ app_name = 'main'
 
 urlpatterns = [
     path('',views.main, name='main'),
-    path('pdf_upload',views.model_form_upload,name='pdf_upload')
+    path('pdf_upload_single',views.model_form_upload,name='pdf_upload_single'),
+    path('pdf_upload_multiple',views.model_form_upload,name='pdf_upload_multiple'),
 ]
