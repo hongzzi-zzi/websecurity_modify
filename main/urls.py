@@ -6,7 +6,7 @@ from . import views
 app_name = 'main'
 
 urlpatterns = [
-    path('',views.main, name='main'),
+    path('main',views.main, name='main'),
     path('result',views.pdf_result,name='pdf_result'),
     path('pdf_upload_single',views.model_form_upload_single,name='pdf_upload_single'),
     path('pdf_upload_multiple',views.model_form_upload_multiple,name='pdf_upload_multiple'),
