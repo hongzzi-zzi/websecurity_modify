@@ -1,6 +1,6 @@
 import sys
 def libsvm_to_csv(libsvmFile):
-	sys.stdout = open('/Users/yehey/Desktop/EWHA/21-2/study_Web-Secuity/util/testresult.csv', 'w')
+	sys.stdout = open('/home/anhong-eun/study_Web-Secuity/util/testresult.csv', 'w')
 	f = open(libsvmFile, 'r')
 
 	lines = f.readlines()
