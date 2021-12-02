@@ -44,7 +44,7 @@ def pdf_result(request):
   return render(request,'pdf_result.html',{'result':result})
 
 def one_pdf_result(request):
-  parser.parser()
+  parser()
   libsvm_to_csv.libsvm_to_csv('/home/anhong-eun/study_Web-Secuity/util/data.libsvm')
   dataset = pd.read_csv('/home/anhong-eun/study_Web-Secuity/util/testresult.csv',header=None)
   df =pd.DataFrame(dataset)
