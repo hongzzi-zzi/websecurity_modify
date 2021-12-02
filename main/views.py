@@ -3,8 +3,7 @@ from .forms import PDFUploadForm
 import pickle
 import pandas as pd
 import numpy as np
-from util import libsvm_to_csv 
-from util import parser
+from util import libsvm_to_csv, parser
 # Create your views here.
 
 def main(request):
