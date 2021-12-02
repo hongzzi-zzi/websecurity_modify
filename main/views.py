@@ -39,7 +39,7 @@ def pdf_result(request):
   df =pd.DataFrame(dataset)
   test=df.iloc[:,:]
   
-  loaded_model = pickle.load(open('/Users/yehey/Desktop/EWHA/21-2/study_Web-Secuity/util/websecurity.pkl', 'rb'))
+  loaded_model = pickle.load(open('/Users/yehey/Desktop/EWHA/21-2/study_Web-Secuity/util/pdf_detection_ml.pkl', 'rb'))
   result = loaded_model.predict(test)
   return render(request,'pdf_result.html',{'result':result})
 
@@ -48,6 +48,6 @@ def one_pdf_result(request):
   df =pd.DataFrame(dataset)
   test=df.iloc[0,:]
   test=test.values.reshape(1,-1)
-  loaded_model = pickle.load(open('/Users/yehey/Desktop/EWHA/21-2/study_Web-Secuity/util/websecurity.pkl', 'rb'))
+  loaded_model = pickle.load(open('/Users/yehey/Desktop/EWHA/21-2/study_Web-Secuity/util/pdf_detection_ml.pkl', 'rb'))
   result = loaded_model.predict(test)
   return render(request,'pdf_result.html',{'result':result[0]})
