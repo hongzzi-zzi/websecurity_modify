@@ -5,7 +5,7 @@ def libsvm_to_csv(libsvmFile):
 
 	lines = f.readlines()
 	for line in lines:	
-		minus_list = [-1]*297
+		minus_list = [-1]*275
 
 		l = line.split(' #')[0]
 		l = l.split(' ')
