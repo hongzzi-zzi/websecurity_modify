@@ -1,3 +1,13 @@
+<!-- {% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+  </form>
+
+  <p><a href="{% url 'main:main' %}">Return to home</a></p>
+{% endblock %} -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -447,8 +457,8 @@
 
 	<section class="hero">
 		<div class="background-image" style="background-image: url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);"></div>
-		<h1>Test single PDF File if Malicious</h1>
-		<h3>Upload your file below</h3>
+		<h1>Test multiple PDF Files if Malicious</h1>
+		<h3>Upload your files below</h3>
 
 	</section>
 
