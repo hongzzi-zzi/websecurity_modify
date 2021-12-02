@@ -1,0 +1,11 @@
+mv /home/anhong-eun/study_Web-Secuity/media/documents/*.zip /home/anhong-eun/Desktop/bbbb
+unzip *.zip -d /home/anhong-eun/Desktop/bbbb/
+mkdir cache
+find $PWD -maxdepth 1 -name '*.pdf' -not -empty >pathname.txt
+/home/anhong-eun/hidost/build/src/cacher -i pathname.txt --compact --values -c cache/ -t10 -m256
+find $PWD/cache -name '*.pdf' -not -empty >cached-pdfs.txt
+cat /home/anhong-eun/Desktop/bbbb/default/defaultcached-pdfs.txt cached-pdfs.txt >cached-pdfs2.txt
+/home/anhong-eun/hidost/build/src/pathcount -i cached-pdfs2.txt -o pathcounts.bin
+/home/anhong-eun/hidost/build/src/feat-select -i pathcounts.bin -o features.nppf -m1
+/home/anhong-eun/hidost/build/src/feat-extract -b cached-pdfs.txt -m /home/anhong-eun/Desktop/bbbb/default/defaultcached-pdfs.txt -f features.nppf --values -o data.libsvm
+mv -f data.libsvm /home/anhong-eun/study_Web-Secuity/util
