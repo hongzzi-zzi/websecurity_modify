@@ -208,6 +208,14 @@
         padding: 20px 46px;
       }
 
+      .hero form {
+        padding: 6px 25px;
+        background-color:#FF6600;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+      }
+
       @media (max-width: 800px) {
         .hero {
           min-height: 600px;
@@ -449,7 +457,12 @@
 		<div class="background-image" style="background-image: url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);"></div>
 		<h1>Test single PDF File if Malicious</h1>
 		<h3>Upload your file below</h3>
-
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+    </form>
+    <a href="" class="btn">Run Test</a>
+    <a href="./main" class="btn">Return to home</a>
 	</section>
 
 	<footer>
