@@ -34,20 +34,20 @@ def model_form_upload_multiple(request):
   })
 
 def pdf_result(request):
-  libsvm_to_csv.libsvm_to_csv('/Users/yehey/Desktop/EWHA/21-2/study_Web-Secuity/util/data.libsvm')
-  dataset = pd.read_csv('/Users/yehey/Desktop/EWHA/21-2/study_Web-Secuity/util/testresult.csv',header=None)
+  libsvm_to_csv.libsvm_to_csv('/home/anhong-eun/study_Web-Secuity/util/data.libsvm')
+  dataset = pd.read_csv('/home/anhong-eun/study_Web-Secuity/util/testresult.csv',header=None)
   df =pd.DataFrame(dataset)
   test=df.iloc[:,:]
   
-  loaded_model = pickle.load(open('/Users/yehey/Desktop/EWHA/21-2/study_Web-Secuity/util/pdf_detection_ml.pkl', 'rb'))
+  loaded_model = pickle.load(open('/home/anhong-eun/study_Web-Secuity/util/pdf_detection_ml.pkl', 'rb'))
   result = loaded_model.predict(test)
   return render(request,'pdf_result.html',{'result':result})
 
 def one_pdf_result(request):
-  dataset = pd.read_csv('/Users/yehey/Desktop/EWHA/21-2/study_Web-Secuity/util/testresult.csv',header=None)
+  dataset = pd.read_csv('/home/anhong-eun/study_Web-Secuity/util/testresult.csv',header=None)
   df =pd.DataFrame(dataset)
   test=df.iloc[0,:]
   test=test.values.reshape(1,-1)
-  loaded_model = pickle.load(open('/Users/yehey/Desktop/EWHA/21-2/study_Web-Secuity/util/pdf_detection_ml.pkl', 'rb'))
+  loaded_model = pickle.load(open('/home/anhong-eun/study_Web-Secuity/util/pdf_detection_ml.pkl', 'rb'))
   result = loaded_model.predict(test)
   return render(request,'pdf_result.html',{'result':result[0]})
